@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgb(8, 11, 212) 0%, rgb(221, 255, 3) 50%, rgb(51, 3, 196) 100%);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-top: 2rem;
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.title{
+    display: flex;
+    gap: 10px;
+    width: 500px;
+    justify-content: center;
+}
+
+.editor-container {
+  position: relative;
+  border: 2px solid #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editor-container img {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.controls label,
+.controls button {
+  background: #444;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+}
+
+#upload {
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.upload-button {
+  margin-top: 10px;
+  z-index: 10;
+  background: rgba(189, 7, 7, 0.5);
+  color: white;
+  border: 5px solid white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background: rgba(11, 204, 27, 0.7);
+}
+.download-button {
+  display: none;
+  margin-top: 10px;
+  z-index: 10;
+  background: rgba(255, 12, 12, 0.5);
+  color: white;
+  border: 5px solid white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  font-size: 16px;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background: rgba(255, 1, 1, 0.7);
+}
+
+.upload-icon {
+  width: 30px;
+  height: 30px;
+}
+.download-icon{
+  width: 30px;
+  height: 30px;
+}
+.toggle-option{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+ 
+}
+
+
+
+/* footer */
+.page-wrapper
+{
+    bottom: 0;
+    width: 100%;
+    /* border: 2px solid red;; */
+    z-index: 11111;
+    top: 35px;
+}
+.footer-top {
+    background: #2e2b2b;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 20px;
+    font-family: rubik;
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    gap: 10px;
+  
+}
+#waterdrop {
+    height: 30px;
+}
+
+#waterdrop canvas {
+    bottom: -70px !important;
+}
+
+.footer-top p {
+    margin: 0;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>RRLS CAMPAIGN </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+  </head>
+
+  <body>
+  
+    <div class="header">
+        <div class="title">
+            <img src="/images/schoolLogo.jpg" height="30" alt="" srcset="" />
+            <h2>श्री रत्न राज्य लक्ष्मी मा. वि.</h2>
+        </div>
+        <marquee width="280px" direction="left">I will study in my school</marquee>
+    </div>
+    <div class="editor-container" id="editor-container">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="toggle-option">
+        <div style="display: flex; align-items: center; gap: 5px;">
+            <label for="upload" class="upload-button">
+              <img
+                class="upload-icon"
+                src="/images/upload-icon.png"
+                alt="Upload Icon"
+              />
+              <h6>Upload Image</h6>
+            </label>
+            <input type="file" id="upload" accept="image/*" />
+        </div>
+        <div id="download" class="download-button">
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <img
+                    class="download-icon"
+                    src="/images/download.png"
+                    alt="Download Icon"
+                  />
+                <h6>Download Image</h6>
+            </div>
+        </div>
+    </div>
+   
+    <div class="controls">
+      <label
+        >Zoom:
+        <input type="range" id="zoom" min="0.1" max="4" step="0.1" value="2"
+      /></label>
+      <label
+        >Rotate:
+        <input type="range" id="rotate" min="-180" max="180" step="1" value="0"
+      /></label>
+    </div>
+    
+</div>
+    <!-- footer -->
+    <div class="page-wrapper">
+        <div id="waterdrop"></div>
+        <footer>
+        <div class="footer-top">
+            <p>&copy; 2025 Web Vision Nepal</p>
+            <p style="display: flex; flex-direction: column; align-items: center;"><b>Design and Developers</b><span>Er. Uday Adhikari</span></p>
+        </div>
+    </footer>
+    </div>
+    
+    
+     <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
