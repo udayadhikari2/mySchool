@@ -4,11 +4,17 @@
 }
 
 body {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, rgb(8, 11, 212) 0%, rgb(221, 255, 3) 50%, rgb(51, 3, 196) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(8, 11, 212) 0%,
+    rgb(221, 255, 3) 50%,
+    rgb(51, 3, 196) 100%
+  );
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -23,11 +29,11 @@ body {
   gap: 5px;
   margin-bottom: 20px;
 }
-.title{
-    display: flex;
-    gap: 10px;
-    width: 500px;
-    justify-content: center;
+.title {
+  display: flex;
+  gap: 10px;
+  width: 500px;
+  justify-content: center;
 }
 
 .editor-container {
@@ -125,53 +131,58 @@ body {
   width: 30px;
   height: 30px;
 }
-.download-icon{
+.download-icon {
   width: 30px;
   height: 30px;
 }
-.toggle-option{
+.toggle-option {
   display: flex;
   flex-direction: row;
   gap: 30px;
- 
 }
-
-
 
 /* footer */
-.page-wrapper
-{
-    bottom: 0;
-    width: 100%;
-    /* border: 2px solid red;; */
-    z-index: 11111;
-    top: 35px;
+.page-wrapper {
+  bottom: 0;
+  width: 100%;
+  /* border: 2px solid red;; */
+  z-index: 11111;
+  top: 35px;
 }
 .footer-top {
-    background: #2e2b2b;
-    background-size: cover;
-    background-position: center;
-    padding: 0 0 20px;
-    font-family: rubik;
-    padding-top:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    gap: 10px;
-  
+  background: #2e2b2b;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 20px;
+  font-family: rubik;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  gap: 10px;
 }
 #waterdrop {
-    height: 30px;
+  height: 30px;
 }
 
 #waterdrop canvas {
-    bottom: -70px !important;
+  bottom: -70px !important;
 }
 
 .footer-top p {
-    margin: 0;
+  margin: 0;
+}
+
+.loader {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99999;
 }

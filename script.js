@@ -158,3 +158,32 @@ const handleResize = () => {
 };
 handleResize();
 window.addEventListener("resize", handleResize);
+
+const initApp = (url) => {
+  const userAgent = navigator.userAgent;
+  const isMessengerBrowser = userAgent.includes("FB_IAB");
+  const isIOS = device.ios();
+  const loader = document.createElement("div");
+  loader.className = "loader";
+
+  if (isMessengerBrowser) {
+    document.body.append(loader);
+    if (isIOS) {
+      // TODO: Write for IOS
+    } else {
+      const androidIntent = `intent://${location.origin.replace(
+        /https?:\/\//,
+        ""
+      )}#Intent;scheme=https;package=com.android.chrome;end`;
+      console.log(androidIntent);
+
+      const link = document.createElement("a");
+      document.body.append(link);
+      link.href = androidIntent;
+      link.text = "redirect";
+      link.click();
+    }
+  }
+};
+
+initApp();
