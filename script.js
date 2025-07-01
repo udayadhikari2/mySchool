@@ -51,12 +51,12 @@ upload.addEventListener("change", (event) => {
 
 img.onload = () => {
   imageLoaded = true;
-//   uploadButton.style.top = "100px";
-//   uploadButton.style.left = "10px"; // Keep at top-left
-//   uploadButton.style.transform = "none";
+  //   uploadButton.style.top = "100px";
+  //   uploadButton.style.left = "10px"; // Keep at top-left
+  //   uploadButton.style.transform = "none";
   uploadButton.style.background = "rgba(11, 204, 27, 0.7)";
   uploadButton.querySelector("h6").innerHTML = "Change Image";
-  download.style.display="block";
+  download.style.display = "block";
   imgX = 0;
   imgY = 0;
   zoom.value = 1;
@@ -134,11 +134,16 @@ download.addEventListener("click", () => {
     alert("Please upload an image before downloading!");
     return;
   }
-  const dataUrl = canvas.toDataURL("image/jpeg", 1.0);
-  const link = document.createElement("a");
-  link.href = dataUrl;
-  link.download = "RRLS-FRAME.jpeg";
-  link.click();
+
+  canvas.toBlob((blob) => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "RRLS-FRAME.jpeg";
+    link.click();
+  });
+  // const dataUrl = canvas.to("image/jpeg", 1.0);
+  // console.log({ dataUrl });
 });
 
 const handleResize = () => {
